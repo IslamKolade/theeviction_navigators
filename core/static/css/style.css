@@ -465,7 +465,7 @@ a:focus {
 .section-header p {
     margin-bottom: 10px;
     font-size: 40px;
-    color: #fa9d00;
+    color: #666666;
 }
 
 .section-header h2 {
@@ -572,7 +572,8 @@ a:focus {
     margin: 0;
     padding: 25px 15px 15px 15px;
     font-size: 20px;
-    color: #fa9d00;
+    font-weight: 600;
+    color: #168dd2;
 }
 
 .service .service-item p {
