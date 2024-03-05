@@ -1,0 +1,570 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Eviction Navigators</title>
+        <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+        <meta content="The Eviction Navigators" name="keywords">
+        <meta content="The Eviction Navigators" name="description">
+
+        <meta name="author" content="Dev-Dynamics">
+        <meta name="google-site-verification" content="KzzDYQsvAXWBS56xpt9o2PvVo-MUI1M_UIRWXbI3bbE" />
+        <meta property="og:title" content="The Eviction Navigators">
+        <meta property="og:description" content="The Eviction Navigators">
+        <meta property="og:image" content="https://theevictionavigators.com/static/images/logo.png">
+        <meta property="og:url" content="https://theevictionavigators.com/">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:title" content="The Eviction Navigators">
+        <meta name="twitter:description" content="The Eviction Navigators">
+        <meta name="twitter:image" content="https://theevictionavigators.com/static/images/logo.png">
+        <meta name="twitter:card" content="https://theevictionavigators.com/static/images/logo.png">
+
+        <!-- Favicon -->
+        <link href="{% static "images/favicon.ico" %}" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!--AJAX and Jquery and Google ReCaptcha-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="{% static "lib/owlcarousel/assets/owl.carousel.min.css" %}" rel="stylesheet">
+        <link href="{% static "lib/lightbox/css/lightbox.min.css" %}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static "css/style.css" %}" rel="stylesheet">
+    </head>
+    <style>
+        .preloader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+    </style>
+
+    <body>
+        <div class="wrapper">
+            <!-- Spinner Start -->
+            <div class="preloader-overlay">
+                <i class="fas fa-spinner fa-spin" style="font-size: 100px; color: #168dd2;"></i>
+            </div>
+            <!-- Spinner End -->
+
+            <!-- Header Start -->
+            <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-4">
+                            <div class="brand">
+                                <a href="index.html">
+                                    <span style="color:#fa9d00;">The</span> Eviction <span style="color:#fa9d00;">Navigators</span>
+                                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="topbar">
+                                <div class="topbar-col">
+                                    <a href="tel:{{the_eviction_navigators.phone_number}}"><i class="fa fa-phone-alt"></i>{{the_eviction_navigators.phone_number}}</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <a href="mailto:{{the_eviction_navigators.email}}"><i class="fa fa-envelope"></i>{{the_eviction_navigators.email}}</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <div class="topbar-social">
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-youtube"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <a href="#" class="nav-item nav-link active">Home</a>
+                                        <a href="#about_us" class="nav-item nav-link">About</a>
+                                        <a href="#services" class="nav-item nav-link">Services</a>
+                                        <a href="#faqs" class="nav-item nav-link">FAQs</a>
+                                        <a href="#testimonials" class="nav-item nav-link">Testimonials</a>
+                                        <a href="#contact_us" class="nav-item nav-link">Contact</a>
+                                        <a href="#" class="btn">Get A Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero row align-items-center">
+                        <div class="col-md-7">
+                            <h2>Let us ease your mind,</h2>
+                            <h2>We can <span>help</span> you</h2>
+                            <br>
+                            <ul>
+                                <li>Eviction Delay</li>
+                                <li>Tenant Rights Texas</li>
+                                <li>Stop Foreclosure Eviction in Texas</li>
+                                <li>Renter Rights</li>
+                                <li>Delay Commercial Eviction</li>
+                            </ul>
+                            <a class="btn" style="font-weight: 700;" href="#services">Explore Now</a>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form">
+                                <h3>Contact us Today!</h3>
+                                <p style="text-align: center; font-size: 15px;">Postpone Evictions & Foreclosures Today, Start Right Now!</p>
+                                <form id="contactForm">
+                                    {% csrf_token %}
+                                    <input class="form-control" type="text" placeholder="Enter your name" name="name">
+                                    <input class="form-control" type="email" placeholder="Enter your email" name="email">
+                                    <input class="form-control" type="text" placeholder="Enter Eviction Type" name="eviction_type">
+                                    <input class="form-control" type="text" placeholder="Enter your phone number" name="phone_number">
+                                    <textarea class="form-control" placeholder="Add your message" name="message"></textarea>
+                                    <!-- Google reCAPTCHA widget -->
+                                    <div class="g-recaptcha" data-sitekey="6LduioUpAAAAAFAgn8NkbPjamp1RrFZ8crng1utk"></div>
+                                    <br>
+                                    <button type="submit" class="btn btn-block">Request a Call Back</button>
+                                    <p style="text-align: right; font-size: 15px;">100% privacy Guaranteed.</p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header End -->
+
+            <!-- Success Modal -->
+            <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true"> 
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="successModalLabel">Success!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fas fa-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Message successfully sent.
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn" style="background-color: #168dd2; color: white;" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <!-- Error Modal -->
+            <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="errorModalLabel">Error!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fas fa-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Message wasn't sent. Please try again.
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn" style="background-color: #168dd2; color: white;" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- About Start -->
+            <div id="about_us"></div>
+            <div class="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="about-img">
+                                <img src="{% static "images/about.jpg" %}" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-6">
+                            <div class="about-text">
+                                <h2><span>About</span> Us</h2>
+                                <p>
+                                    The Eviction Navigators have been serving the Houston/Dallas surrounding areas over 6 +years We specialize in eviction and foreclosure services.
+                                </p>
+                                <p>
+                                    Striving to offer a full service solution to make your eviction or foreclosure stress free.
+                                </p>
+                                <p>
+                                    Our main aim is to assist you through the process and provide a peace of mind during these high stakes.
+                                </p>
+                                <p>
+                                    The main differences between our services and other companies is that we are there for you every step of the way.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+
+            <!-- Service Start -->
+            <div id="services"></div>
+            <div class="service">
+                <div class="container">
+                    <div class="section-header">
+                        <p>Our Services</p>
+                        <h2>Delay your eviction. You have the right. We have the way.</h2>
+                    </div>
+                    <div class="row" style="align-items:center; justify-content:center; display:flex;">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="{% static "images/eviction-delay.jpg" %}" alt="Service">
+                                <h3>Eviction Delay</h3>
+                                <p>
+                                    Ways to Avoid Eviction: If a tenant is facing eviction there are certain steps he/she can take to avoid or eviction delay in california, based on the California landlord – tenant law. First, talk with the landlord to see if there
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="{% static "images/tenant-rights.jpeg" %}" alt="Service">
+                                <h3>Tenant Rights Texas</h3>
+                                <p>
+                                    Renters are the most affected when it comes to foreclosure or receiving the eviction notice. Nonetheless, these families have to go through things like wrongful eviction, harassment and such related experiences; however, there are quite a few Texas tenant.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="{% static "images/foreclosure.jpg" %}" alt="Service">
+                                <h3>Stop Foreclosure Eviction in Texas</h3>
+                                <p>
+                                    If a tenant fails to abide by the rental agreement, the landlord can give the tenant a three-day notice to vacate the unit. However, state law requires this notice to be conditional if the tenant’s failure is curable.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="{% static "images/renters-rights.jpg" %}" alt="Service">
+                                <h3>Renter's Rights</h3>
+                                <p>
+                                    The most important source of information about your relationship with your landlord is your rental agreement, whether it is written or oral.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="{% static "images/commercial-eviction.jpg" %}" alt="Service">
+                                <h3>Delay Commercial Eviction</h3>
+                                <p>
+                                    Texas is a relatively pro-landlord state when it comes to commercial lease disputes and evictions. Notably, a landlord has a statutory right to lock out a commercial tenant who fails to pay part or all of the rent on time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service End -->
+
+            <!-- FAQs Start -->
+            <div id="faqs"></div>
+            <div class="faqs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="section-header left">
+                                <p>You Might Ask</p>
+                                <h2>Frequently Asked Questions</h2>
+                            </div>
+                            <img src="{% static "images/faqs.png" %}" alt="Image">
+                        </div>
+                        <div class="col-md-7">
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="true">
+                                            <span>1</span>How long do you have to move out after an eviction notice?
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                        <div class="card-body">
+                                            First, the time period in the Eviction Notice must be over (usually 7 days or 30 days).
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                                            <span>2</span> Can you cancel an eviction?
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            An eviction notice starts the process of removing a tenant from a rental unit. However, not all eviction notices result in a forcible eviction.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseThree">
+                                            <span>3</span> Can you appeal an eviction notice?
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Typically, you can only appeal from a final judgment in a case. … A landlord or tenant who wants to appeal has only ten “judicial days”
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseFour">
+                                            <span>4</span> What is the law on eviction?
+                                        </a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            An eviction is a lawsuit that is filed against a tenant, sometimes called an unlawful detainer or UD lawsuit.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseFive">
+                                            <span>5</span> Is it legal to evict someone in 3 days?
+                                        </a>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Three Day Pay or Vacate Notice. In order to win in court against an eviction for non-payment of rent, the tenant must be able to establish that they do not owe the rent the landlord is trying to collect.
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseSix">
+                                            <span>6</span> What does notice to quit and vacate mean?
+                                        </a>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            If you are involved in a criminal case, in most circumstances you may have a lawyer appointed to you if the court decides you cannot afford a lawyer. You might also have the right to a court-appointed lawyer in some civil cases
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FAQs End -->
+
+            <!-- Testimonials Start -->
+            <div id="testimonials"></div>
+            <div class="testimonial">
+                <div class="container">
+                    <div class="section-header">
+                        <p>Testimonials</p>
+                        <h2>SEE WHAT PEOPLE ARE SAYING ABOUT US</h2>
+                    </div>
+                    <div class="owl-carousel testimonials-carousel">
+                        <div class="testimonial-item">
+                            <div class="testimonial-img">
+                                <img src="{% static "images/testimonial-1.jpg" %}" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <p>
+                                    The Eviction Navigators helped get my eviction postpone it gave more time to save money and move.
+                                </p>
+                                <h3>Andy Jones</h3>
+                                <h4>Houston Tx</h4>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="testimonial-img">
+                                <img src="{% static "images/testimonial-2.jpg" %}" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <p>
+                                    I would recommend this company they went through the whole eviction process pmwith me step by step.
+                                </p>
+                                <h3>Susie Carter</h3>
+                                <h4>Dallas Tx</h4>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="testimonial-img">
+                                <img src="{% static "images/testimonial-3.jpg" %}" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <p>
+                                    I went through The Eviction Navigators they always had a live person to answer my questions or concern no matter what time of day I called their office.
+                                </p>
+                                <h3>Shaquille Jones</h3>
+                                <h4>Missouri City Tx</h4>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="testimonial-img">
+                                <img src="{% static "images/testimonial-4.jpg" %}" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <p>
+                                    I called this company at last minute they got me square away even had a bilingual agent that spoke Spanish thanks Shelia.
+                                </p>
+                                <h3>Maria Martinez</h3>
+                                <h4>Pasadena Tx</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial End -->
+
+            <!-- Footer Start -->
+            <div id="contact_us"></div>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-4">
+                            <div class="footer-contact">
+                                <h2>Get In Touch</h2>
+                                <a><i class="fa fa-map-marker-alt"></i>{{the_eviction_navigators.address}}</a>
+                                <br><br>
+                                <a href="tel:{{the_eviction_navigators.phone_number}}"><i class="fa fa-phone-alt"></i>{{the_eviction_navigators.phone_number}}</a>
+                                <br><br>
+                                <a href="mailto:{{the_eviction_navigators.email}}"><i class="fa fa-envelope"></i>{{the_eviction_navigators.email}}</a>
+                                <div class="footer-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-lg-4">
+                            <div class="footer-link">
+                                <h2>Useful Link</h2>
+                                <a href="#about_us">About Us</a>
+                                <a href="#services">Our Services</a>
+                                <a href="#testimonials">Testimonials</a>
+                                <a href="#faqs">FAQs</a>
+                                <a href="#contact_us">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; <a>The Eviction Navigators</a>, All Right Reserved.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Developed By <a href="https://www.fiverr.com/islamsanni">Dev-Dynamics</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+            
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript for Form Submission -->
+        <script>
+            $(document).ready(function () {
+                $("#contactForm").submit(function (e) {
+                    e.preventDefault();
+                    $(".preloader-overlay").show();
+
+                    var response = grecaptcha.getResponse();
+
+                    if (!response) {
+                        alert("Please complete the reCAPTCHA challenge.");
+                        $(".preloader-overlay").hide();
+                        return;
+                    }
+
+                    var formData = $(this).serializeArray();
+                    formData.push({ name: 'csrfmiddlewaretoken', value: $('input[name=csrfmiddlewaretoken]').val() });
+
+                    $.ajax({
+                        type: "POST",
+                        url: "{% url 'contact_form_submission' %}",
+                        data: formData,
+                        success: function (response) {
+                        $(".preloader-overlay").hide();
+                            $('#successModal').modal('show');
+                            $("#contactForm")[0].reset();
+                            grecaptcha.reset()
+                        },
+                        error: function (error) {
+                        $(".preloader-overlay").hide();
+                            $('#errorModal').modal('show');
+                            grecaptcha.reset()
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <!--Preloader-->
+        <script>
+            $(document).ready(function () {
+                $(".preloader-overlay").hide();
+            });
+
+            function showPreloader(event) {
+                if (navigator.onLine) {
+                $(".preloader-overlay").show();
+            
+                window.onpageshow = function(event) {
+                    if (event.persisted) {
+                    $(".preloader-overlay").hide();
+                    }
+                };
+                } else {
+                alert("You are currently offline. Please check your internet connection.");
+                event.preventDefault();
+                }
+            }
+        </script>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static "lib/easing/easing.min.js" %}"></script>
+        <script src="{% static "lib/owlcarousel/owl.carousel.min.js" %}"></script>
+        <script src="{% static "lib/isotope/isotope.pkgd.min.js" %}"></script>
+        <script src="{% static "lib/lightbox/js/lightbox.min.js" %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+
+        <!-- Template Javascript -->
+        <script src="{% static "js/main.js" %}"></script>
+    </body>
+</html>
