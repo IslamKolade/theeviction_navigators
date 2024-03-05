@@ -254,10 +254,11 @@ a:focus {
     padding: 12px 20px 10px 20px;
     font-size: 13px;
     text-transform: uppercase;
-    color: #168dd2;
+    color: #ffffff;
+    font-weight: 600;
     border: none;
     border-radius: 5px;
-    background: #ffffff;
+    background: #fa9d00;
     transition: .3s;
 }
 
@@ -337,7 +338,7 @@ a:focus {
     height: 45px;
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, .3);
-    background: rgba(255, 255, 255, .2);
+    background: white;
 }
 
 .header .hero .form textarea {
@@ -347,7 +348,7 @@ a:focus {
 .header .hero .form select,
 .header .hero .form input::placeholder,
 .header .hero .form textarea::placeholder {
-    color: #ffffff;
+    color: #757575;
 }
 
 .header .hero .form select option:not(:checked) {
@@ -464,6 +465,7 @@ a:focus {
 .section-header p {
     margin-bottom: 10px;
     font-size: 40px;
+    color: #fa9d00;
 }
 
 .section-header h2 {
@@ -570,7 +572,7 @@ a:focus {
     margin: 0;
     padding: 25px 15px 15px 15px;
     font-size: 20px;
-    color: #168dd2;
+    color: #fa9d00;
 }
 
 .service .service-item p {
