@@ -126,7 +126,7 @@ a:focus {
 
 .header .brand a {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .header .brand img {
@@ -280,11 +280,6 @@ a:focus {
     .header .navbar .btn {
         display: none;
     }
-}
-
-.header .hero {
-    padding-top: 60px;
-    padding-bottom: 60px;
 }
 
 .header .hero h2 {
