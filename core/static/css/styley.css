@@ -318,7 +318,7 @@ a:focus {
 .header .hero .form {
     padding: 30px;
     border: 1px solid rgba(255, 255, 255, .4);
-    background: linear-gradient(rgba(0, 83, 156, 1), rgba(0, 83, 156, .9), rgba(0, 83, 156, 1));
+    background: #168dd2;
     border-radius: 5px;
 }
 
