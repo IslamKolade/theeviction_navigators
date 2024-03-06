@@ -103,7 +103,7 @@ a:focus {
 
 .header.home {
     margin-bottom: 45px;
-    background: #168dd2;
+    background: linear-gradient(rgba(0, 83, 156, 1), rgba(0, 83, 156, .9), rgba(0, 83, 156, 1)), url(../img/header.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
