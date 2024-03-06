@@ -127,6 +127,7 @@ a:focus {
 .header .brand a {
     color: #ffffff;
     font-size: 25px;
+    font-weight: 700;
 }
 
 .header .brand img {
